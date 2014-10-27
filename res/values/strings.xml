@@ -4,5 +4,8 @@
     <string name="app_name">ModernArtUI</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="alert_moma_message">App inspired by...</string>
+    <string name="alert_moma_positive">Learn more</string>
+    <string name="alert_moma_negative">Not now</string>
 
 </resources>

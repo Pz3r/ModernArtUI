@@ -38,8 +38,8 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		LinearLayout layoutContainer = (LinearLayout) findViewById(R.id.layout_container);
-		paintLayout(layoutContainer);
+		//LinearLayout layoutContainer = (LinearLayout) findViewById(R.id.layout_container);
+		//paintLayout(layoutContainer);
 
 	}
 

@@ -1,11 +1,12 @@
 package com.example.modernartui;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.graphics.Path.FillType;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
@@ -22,7 +23,15 @@ public class MainActivity extends ActionBarActivity {
 	private Random ran = new Random();
 
 	// Define maximum weight a view can have
-	private static final int MAX_WEIGHT = 10;
+	private static final int MAX_WEIGHT = 4;
+
+	// Define number of rows per column
+	private static final int MAX_ROWS = 6;
+
+	// Available colors array
+	private static final int[] AVAILABLE_COLORS = { R.color.blue,
+			R.color.purple, R.color.green, R.color.orange, R.color.red,
+			R.color.grey };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,15 +49,30 @@ public class MainActivity extends ActionBarActivity {
 		// LinearLayout child from layout_container
 		int columnCount = container.getChildCount();
 
-		// Populate each LinearLayout column with random number of row
-		// Views (5 or 6)
+		// Populate each LinearLayout column with Views
 		LinearLayout column;
+
+		// ArrayList used to keep track of which colors have been already used
+		// in each row
+		ArrayList<Integer> colors;
+
+		// View to be added
+		View tempView;
+
 		for (int i = 0; i < columnCount; i++) {
 			column = (LinearLayout) container.getChildAt(i);
+			colors = getArrayListFromArray(AVAILABLE_COLORS);
+			// Generate MAX_ROWS randomized views and add them to the current
+			// column
+			for (int j = 0; j < MAX_ROWS; j++) {
+				tempView = generateRandomizedView();
+				colorView(colors, tempView);
+				column.addView(tempView);
+			}
 		}
 	}
 
-	// Method for generating a View with a randomized weight and background.
+	// Method for generating a View with a randomized weight.
 	private View generateRandomizedView() {
 
 		int weight = ran.nextInt(MAX_WEIGHT) + 1;
@@ -60,7 +84,27 @@ public class MainActivity extends ActionBarActivity {
 		view.setLayoutParams(params);
 
 		return view;
+	}
 
+	// Select a Random color from an ArrayList containing the id's from the
+	// available color resources, a color can only be used once per row
+	private void colorView(ArrayList<Integer> colors, View view) {
+		if (colors != null && view != null) {
+			int position = ran.nextInt(colors.size());
+			int color = (Integer) (colors.get(position));
+
+			view.setBackgroundResource(color);
+			// Remove used color from the list so it cannot be used again.
+			colors.remove(position);
+		}
+	}
+
+	private ArrayList<Integer> getArrayListFromArray(int[] array) {
+		ArrayList<Integer> temp = new ArrayList<Integer>();
+		for (int i = 0; i < array.length; i++) {
+			temp.add(array[i]);
+		}
+		return temp;
 	}
 
 	@Override

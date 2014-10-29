@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue">#178BB5</color>
-    <color name="purple">#AA66CC</color>
-    <color name="green">#4D6633</color>
-    <color name="orange">#FFBB33</color>
-    <color name="red">#FF4444</color>   
-    <color name="grey">#BABABA</color>
+    <!-- Shades of blue -->
+    <color name="blue_0">#4BC5E7</color>
+    <color name="blue_1">#35BEE3</color>
+    <color name="blue_2">#1FB6E0</color>
+    <color name="blue_3">#1CA4CA</color>
+    <color name="blue_4">#1892B4</color>
+    <color name="blue_5">#15809D</color>
+    <color name="blue_6">#126D87</color>
+    <color name="blue_7">#0F5B70</color>
+    <color name="blue_8">#0C495A</color>
+    <color name="blue_9">#093643</color>
+    <color name="blue_10">#06242D</color>    
+    
+    <!-- Shades of red -->
+    <color name="red_0">#F50000</color>
+  	<color name="red_1">#FF0F0F</color>
+    <color name="red_2">#FF2929</color>
+    <color name="red_3">#FF4444</color>
+    <color name="red_4">#FF5C5C</color>
+    <color name="red_5">#FF7575</color>
+    <color name="red_6">#FF8F8F</color>
+    <color name="red_7">#FFA8A8</color>
+    <color name="red_8">#FFC2C2</color>
+    <color name="red_9">#FFDBDB</color>
+    <color name="red_10">#FFF5F5</color>
+    
+    <!-- Shades of brown -->
+   	<color name="brown_0">#433123</color>
+   	<color name="brown_1">#543D2C</color>
+   	<color name="brown_2">#644935</color>
+   	<color name="brown_3">#75563E</color>
+   	<color name="brown_4">#866246</color>
+   	<color name="brown_5">#966E4F</color>
+   	<color name="brown_6">#A77A58</color>
+   	<color name="brown_7">#B08869</color>
+   	<color name="brown_8">#B99579</color>
+   	<color name="brown_9">#C1A28A</color>
+   	<color name="brown_10">#CAAF9B</color>
+    
+    <color name="grey">#BABABA</color>    
+   	<color name="dark_grey">#6B6B6B</color>
    	<color name="black">#000000</color>
-   	<color name="brown">#433123</color>  
+   	<color name="brown">#433123</color>
 </resources>

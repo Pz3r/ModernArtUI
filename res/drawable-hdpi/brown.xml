@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:maxLevel="0" android:drawable="@color/brown_0" />
+    <item android:maxLevel="5" android:drawable="@color/brown_1" />
+    <item android:maxLevel="10" android:drawable="@color/brown_2" />
+    <item android:maxLevel="15" android:drawable="@color/brown_3" />
+    <item android:maxLevel="20" android:drawable="@color/brown_4" />
+    <item android:maxLevel="25" android:drawable="@color/brown_5" />
+    <item android:maxLevel="30" android:drawable="@color/brown_6" />
+    <item android:maxLevel="35" android:drawable="@color/brown_7" />
+    <item android:maxLevel="40" android:drawable="@color/brown_8" />
+    <item android:maxLevel="45" android:drawable="@color/brown_9" />
+    <item android:maxLevel="50" android:drawable="@color/brown_10" />
+</level-list>
